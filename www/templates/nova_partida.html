@@ -1,0 +1,37 @@
+<ion-view view-title="Inf. da Partida">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" style="background-color: #3c3c3c;">
+        <form name="authorizationForm" novalidate="" ng-submit="signIn(authorizationForm)" class="posiciona-infos"> 
+            
+        <div class="inf-partida">
+          <div class="posiciona-data">
+          <label ion-datetime-picker date ng-model="dateValue">
+            <center style="margin-top:30%;">
+              {{dateValue| date: "dd/MM/yyyy"}}
+              <span class="input-label" style="color:#FFF;font-size:11px;text-align:center;">DATA</span>
+            </center>
+          </label> 
+          </div>
+          
+          <div class="posiciona-hora">
+          <label ion-datetime-picker time ng-model="timeValue">
+            <center style="margin-top:30%;">
+              {{timeValue| date: "H:mm"}}
+              <span class="input-label" style="color:#FFF;font-size:11px;text-align:center;">HORA</span>
+              </center>
+          </label>
+          </div>
+
+          <div class="posiciona-participantes">
+          <center style="margin-top:20%;">
+            <input type="number" placeholder="Qtd. Participantes" value="{{ qtdParticipantes }}" style="width:40%;background-color:#505050;color:#FFF;">
+            <span class="input-label" style="color:#FFF;font-size:11px;margin-top:-5%;text-align:center;">PARTICIPANTES</span>
+          </div>
+          </center>
+        </div>
+        <button class="button button-positive button-busca-jogador" type="submit">
+            BUSCAR JOGADOR
+        </button>
+            
+        </form>   
+    </ion-content>
+</ion-view>

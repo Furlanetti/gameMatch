@@ -1,0 +1,315 @@
+/* General
+==================================*/
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+}
+
+.bar-header {
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
+    height: 60px !important;
+}
+
+.title{
+    margin-top:7px !important;
+}
+
+.button{
+    margin-top:7px !important;
+}
+
+.list{
+    margin-top:14px !important;
+}
+
+.aceito {
+    background-color: #dff0d8;
+    color:#3c7646;
+    float: right;
+    padding-top: 5px;  
+    margin-top: -35px;
+    height: 30px;
+    text-align: center;
+    width: 100px;
+}
+
+.negado {
+    background-color: #f2dede;
+    color:#a94442;
+    float: right;
+    padding-top: 5px;  
+    margin-top: -35px;
+    height: 30px;
+    text-align: center;
+    width: 100px;
+}
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.item .last{
+    border-bottom:0px;
+}
+
+/* Menu
+==================================*/
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #222;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/crown.jpg') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+
+.position-down{
+    align-content: flex-end;
+}
+
+
+/* Perfil
+==================================*/
+.panel-perfil{
+    background-color: #FFF;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    border-radius: 3%;
+    border-top: 5px solid #6b52be;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.panel-perfil .panel-content{
+    padding: 10px;
+}
+
+.nivel-sim{
+    border-radius: 50%;
+    background-color: #6b52be;
+    display: inline-block;
+    height: 20px;
+    margin: 3px;
+    width: 20px; 
+}
+
+.nivel-nao{
+    border-radius: 50%;
+    border:1px solid #6b52be;
+    background-color: #FFF;
+    display: inline-block;
+    height: 20px;
+    margin:3px;
+    width: 20px; 
+}
+
+
+/* Selecione Esporte
+==================================*/
+.esporte_geral{
+    margin:0 auto;
+    width: 95%;
+}
+
+.esporte {
+    width: 45%;
+    height: 20%;
+    background-color: #FFF;
+    border: none;
+    padding: 0;
+    color: #656565;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1% 1% 1% 3%;
+}
+
+.esporte .icone {
+    font-size: 35px;
+}
+
+/* imagem pequena de avatares
+===========================================*/
+.display-table{
+    margin-right: -60px;
+}
+.avatar-small{
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 40px !important;
+  width: 40px;
+  left: auto;
+  margin: -35px 20px 0 -10px;
+  position: relative;
+  float: right;
+}
+
+.avatar-convite{
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  height: 40px !important;
+  width: 40px;
+  left: auto;
+  margin: 15px 0 0 -13px;
+  position: relative;
+  float: right;
+}
+
+/* BUTTONS
+===========================================*/
+
+.accept{
+    border-radius: 50%;
+    background-color: #29af4c;
+    border: 0px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+    float: right;
+    width: 40px;
+    z-index: 444;
+    margin: -40px 50px 3px;
+    
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s fade-in-out;
+    transition: 0.3s fade-in-out;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    transition-property: transform, box-shadow;
+}
+
+.deny{
+    border-radius: 50%;
+    border: 0px;
+    background-color: #ef473a;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+    float: right;
+    width: 40px; 
+    z-index: 444;
+    margin: -40px -150px 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* NOVA PARTIDA
+===========================================*/
+
+.posiciona-infos{
+    width:90%; 
+    margin-left:auto; 
+    margin-right:auto;
+    bottom:2%; 
+    position: absolute;
+    left:0; 
+    right:0;
+}
+
+.posiciona-data{
+    text-align: center;
+    background-color: #505050;
+    border-top-left-radius:10%;
+    width: 33%;
+    height: 100px;
+    color:#FFF;
+    float: left;
+}
+
+.posiciona-hora{
+    text-align: center;
+    color:#FFF;
+    background-color: #505050;
+    height: 100px;
+    width: 33%;
+    float: left;
+}
+
+.posiciona-participantes{
+    text-align: center;
+    color:#FFF;
+    background-color: #505050;
+    border-top-right-radius:10%;
+    height: 100px;
+    width: 34%;
+    float: left;
+}
+
+.button-busca-jogador {
+    width:100% !important;  
+    margin-top: 0px !important;
+}
+
+.inf-partida{
+    width:100%; 
+    background-color: #FFF;
+}
+
+.scroll{
+    height: 100%;
+}
+ 
+#map{
+    width: 100%;
+    height: 100%;
+}

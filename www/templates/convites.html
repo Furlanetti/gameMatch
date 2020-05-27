@@ -1,0 +1,27 @@
+<ion-view view-title="Convites">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        
+        <div class="list animate-fade-slide-in-right">
+            <div class="item item-icon-left" ng-repeat="convite in convites">
+                <a ui-sref="app.perfil" class="icon avatar-convite" style="background-image: url('{{ convite.imagem }}');"></a>
+                <h2>{{ convite.esporte }}</h2>
+                <p>{{ convite.horario }}</p>
+                    
+                <div ng-hide="convite.respondido">
+                    <a class="accept ion-checkmark"></a>
+                    <a class="deny ion-close"></a>
+                </div>
+                <div ng-hide="!convite.respondido">
+                    <div ng-if="convite.status == 'Confirmada'" class="aceito">
+                        {{ convite.status }}
+                    </div>
+                    
+                    <div ng-if="convite.status == 'Negada'" class="negado">
+                        {{ convite.status }}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </ion-content>
+</ion-view>

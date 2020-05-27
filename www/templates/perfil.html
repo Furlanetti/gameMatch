@@ -1,0 +1,82 @@
+<ion-view view-title="Perfil">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" style="background-color:#f7f7f7;">
+        <div class="hero slide-up" style="background-color:#6b52be;">
+            <div class="content">
+                <div class="avatar" style="background-image: url('{{ perfil.img }}');"></div>
+                <h3><a class="light">{{ perfil.nome }}</a></h3>
+                <h4>{{ perfil.descricao }}</h4>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a class="tab-item">
+                <i class="icon ion-clock"></i> {{ perfil.idade }} ANOS
+            </a>
+            <a class="tab-item">
+                <i class="icon ion-man"></i> {{ perfil.altura }}
+            </a>
+            <a class="tab-item" ng-if="perfil.genero == 'Homem'">
+                <i class="icon ion-male"></i> {{ perfil.genero }}
+            </a>
+            <a class="tab-item" ng-if="perfil.genero == 'Mulher'">
+                <i class="icon ion-female"></i> {{ perfil.genero }}
+            </a>
+            
+        </div>
+        <div class="panel-perfil">
+            <div class="panel-content">
+                <h4 class="content" style="color:#c9c8c6;">Esportes</h4>
+
+                <div class="item" ng-repeat="esporte in perfil.esportes">
+                    <h2>{{ esporte.esporte }}</h2>
+                    
+                    <p style="width:50%;color:#c9c8c6;" ng-if="esporte.nivel == 1">Nível Iniciante</p>
+                    <p style="width:50%;color:#c9c8c6;" ng-if="esporte.nivel == 2">Nível Iniciante/Intermediário</p>
+                    <p style="width:50%;color:#c9c8c6;" ng-if="esporte.nivel == 3">Nível Intermediário</p>
+                    <p style="width:50%;color:#c9c8c6;" ng-if="esporte.nivel == 4">Nível Intermediário/Avançado</p>
+                    <p style="width:50%;color:#c9c8c6;" ng-if="esporte.nivel == 5">Nível Avançado</p>
+                    
+                    <div class="nivel" ng-if="esporte.nivel == 1">
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                    </div>
+                    
+                    <div class="nivel" ng-if="esporte.nivel == 2">
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                    </div>
+                    
+                    <div class="nivel" ng-if="esporte.nivel == 3">
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-nao"></i>
+                        <i class="nivel-nao"></i>
+                    </div>
+                    
+                    <div class="nivel" ng-if="esporte.nivel == 4">
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-nao"></i>
+                    </div>
+                    
+                    <div class="nivel" ng-if="esporte.nivel == 5">
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                        <i class="nivel-sim"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

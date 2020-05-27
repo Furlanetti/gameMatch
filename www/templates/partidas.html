@@ -1,0 +1,26 @@
+<ion-view view-title="Partidas">
+
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list condensed-space no-padding">
+            <div class="card dark-bg in" style="transition-delay: 0.13s; padding: 0;" ng-repeat="partida in partidas">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" style="width: 100%; height: 100%; " ui-sref='app.info_partida'>
+                    <h2 ui-sref='app.info_partida'>{{ partida.esporte }}</h2>
+                    <p ui-sref="app.info_partida">{{ partida.horario }}</p>
+                    <p style="font-size: 70%;">({{ partida.status }})</p>
+                    <img src="../img/tenis_esporte.jpg" style="transition-delay: 0.02s; width: 100%;">
+                    
+                </a>
+                    
+            </div>
+            <!-- <div class="item item-icon-right" ng-repeat="partida in partidas">
+                <a ui-sref="app.info_partida"><h2>{{ partida.esporte }}</h2></a>
+                <a ui-sref="app.info_partida"><p>{{ partida.horario }}</p></a>
+                
+                <div ng-repeat="perfil in partida.perfils" class="display-table">
+                    <a ui-sref="app.perfil" class=" avatar-small" style="background-image: url('{{ perfil.imagem }}');"></a>
+                </div>
+            </div>
+            -->
+        </div>
+    </ion-content>
+</ion-view>

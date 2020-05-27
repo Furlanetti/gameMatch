@@ -1,0 +1,9 @@
+{
+  "name": "sample",
+  "app_id": "13c494a8",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": []
+}

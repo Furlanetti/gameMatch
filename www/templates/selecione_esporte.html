@@ -1,0 +1,10 @@
+<ion-view view-title="Selecione Esporte">
+    <ion-content ng-class="{expanded:$scope.isExpanded}" style="background-color: #313131;margin-top:15px; padding-top:5px;">
+        
+        <button class="esporte" ui-sref="app.nova_partida" ng-repeat="esporte in esportes">
+            <div class="{{ esporte.icone }} icone"></div>
+            <div class="title">{{ esporte.esporte }}</div>
+        </button>
+        
+    </ion-content>
+</ion-view>
